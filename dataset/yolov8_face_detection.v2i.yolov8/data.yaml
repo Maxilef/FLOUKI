@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['face']
+
+roboflow:
+  workspace: yolo-sebbb
+  project: yolov8_face_detection-tykxf
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yolo-sebbb/yolov8_face_detection-tykxf/dataset/2

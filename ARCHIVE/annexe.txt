@@ -1,0 +1,60 @@
+"""# from PIL
+im1 = Image.open("bus.jpg")
+results = model.predict(source=im1, save=True)  # save plotted images
+
+# from ndarray
+im2 = cv2.imread("bus.jpg")
+results = model.predict(source=im2, save=True, save_txt=True)  # save predictions as labels
+
+# from list of PIL/ndarray
+results = model.predict(source=[im1, im2])"""
+
+"""
+#entrainement du model sur une dataset
+results = model.train(data="coco128.yaml", epochs=3)
+
+# Puis l’évaluer sur ton dataset :
+results = model.val(data=your_data)
+
+"""
+
+"""
+response = requests.get("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
+image = Image.open(BytesIO(response.content))
+image_np = np.asarray(image)
+"""
+
+
+
+
+
+
+
+"""
+  image_path = r"C:\Users\maxim\Desktop\yolov8\echecs_test.jpg"
+  image = Image.open(image_path)
+  image_np = np.asarray(image)
+
+  #predict sur une image
+  results = model.predict(image, conf=0.1)
+  boxes_data = results[0].boxes.data.cpu()
+
+  # Tracer les boîtes englobantes sur l'image
+  plt.imshow(image_np)
+  ax = plt.gca()  # Obtenir l'axe actuel
+
+  for box in boxes_data:
+      x, y, w, h = box[:4]
+      rect = Rectangle((x, y), w, h, fill=False, edgecolor='red', linewidth=2)  # Créer un objet Rectangle
+      ax.add_patch(rect)  # Ajouter le Rectangle à l'axe
+
+  plt.axis('off')
+
+
+  # Sauvegarder l'image avec les boîtes englobantes
+  plt.savefig("output_image_with_boxes.png", bbox_inches='tight', pad_inches=0)
+  plt.show()
+
+  #Sauvegarder new model
+  success = model.export(format="onnx")
+  """

@@ -1,0 +1,20 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 33
+names: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'L', 'LicensePlate', 'M', 'N', 'P', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z','face']
+
+roboflow:
+  workspace: mazen-alwaqdei
+  project: plate-license-dvt6r
+  version: 5
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/mazen-alwaqdei/plate-license-dvt6r/dataset/5
+
+roboflow:
+  workspace: yolo-sebbb
+  project: yolov8_face_detection-tykxf
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yolo-sebbb/yolov8_face_detection-tykxf/dataset/2
