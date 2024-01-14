@@ -10,6 +10,13 @@ import torch
 def main():
     # Créez une instance du modèle YOLOv8 pour l'entraînement
     model = YOLO("yolov8n.yaml") #nouveaux reseaux de neurones vides 
+    
+    # Plusieur modele d'apprentissage du moin au plus gourment :
+    	# yolov8n : nano
+    	# yolov8s : small
+    	# yolov8m : medium
+    	# yolov8l : large
+    	# yolov8x : extra large
 
     path_dataset = r".\dataset\plate_and_face_detection.yolov8\data.yaml"
 

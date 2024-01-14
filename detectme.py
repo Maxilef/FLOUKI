@@ -128,7 +128,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Charger le modèle YOLO
-    model = YOLO(r".\runs\detect\train\weights\best.pt")
+    model = YOLO("./runs/detect/train4/weights/best.pt") #meilleur entrainement réalisé
 
     file_path_or_webcam_id = sys.argv[1]
 
